@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--VUE-->
+    <script src="vue.js"></script>
+    <script src="vue-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+    <!-- Bowlby One SC | Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+
+    <!-- Questrial | Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos | CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!--Titulo de la Página-->
+    <title>Vengadores | A</title>
+</head>
+<style>
+  body { background: linear-gradient(to left, #242525, rgb(209, 115, 8), rgb(10, 167, 106), #242525);}
+
+body::after {
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+</style>
+
+<body>
+
+    <!-- Contenido de la pagina -->
+    <div class="contenedor" id="app">
+        <!-- Barra de Navegación -->
+        <nav id="contenedor-navbar">
+            <!-- Logo  -->
+            <div class="cont-logo">
+                <img src="img/logo.png" alt="logo" class="logo">
+            </div>
+
+            <h1 class="title-nav">AVENGERS ASSEMBLE</h1>
+
+            <div class="nav-menu">
+                <ul class="group-menu-link">
+                    <li>
+                        <router-link class="link" to="/"> Inicio </router-link>
+                    </li>
+                    <li>
+                        <router-link class="link" to="/quienes_somos"> ¿Quienes Somos? </router-link>
+                    </li>
+                    <li> <router-link class="link" to="/vengadores"> Vengadores </router-link></li>
+                    <li> <router-link class="link" to="/gemas"> Gemas del infinito </router-link></li>
+                    <li> <router-link class="link" to="/villanos"> Villanos </router-link></li>
+                    <li> <router-link class="link" to="/contacto"> Contacto </router-link></li>
+                </ul>
+            </div>
+        </nav>
+        <!--Fin de Barra de Navegación-->
+
+        <!--Contenido-->
+        <div class="contenido">
+            <router-view></router-view>
+        </div>
+    </div>
+
+
+    <!--audio src="the-avengers.mp3" autoplay loop style="visibility: hidden;"></audio-->
+
+</body>
+<!--Vistas Vue-->
+<script src="./vistas/inicio.vue.js"></script>
+<script src="./vistas/quienes_somos.vue.js"></script>
+<script src="./vistas/vengadores.vue.js"></script>
+<script src="./vistas/gemas.vue.js"></script>
+<script src="./vistas/villanos.vue.js"></script>
+<script src="./vistas/contacto.vue.js"></script>
+
+<!-- Componentes -->
+<script src="./componentes/crear_vengador.js"></script>
+<script src="./componentes/cambiar_vengador.js"></script>
+<script src="./componentes/crear_gema.js"></script>
+<script src="./componentes/cambiar_gema.js"></script>
+<script src="./componentes/crear_villano.js"></script>
+<script src="./componentes/cambiar_villano.js"></script>
+<script src="./componentes/formulario.js"></script>
+
+<script type="text/javascript">
+    Vue.use(VueRouter);
+
+    var routes = [
+    { path: '/', component: Inicio },
+        { path: '/quienes_somos', component: Quienes_somos },
+        { path: '/vengadores', component: Vengadores, name: "Vengadores" },
+        { path: '/gemas', component: Gemas, name: "Gemas" },
+        { path: '/villanos', component: Villanos, name: "Villanos" },
+        { path: '/crear_vengador', component: CrearVengador, name: "crear_vengador" },
+        { path: '/cambiar_vengador/:id', component: CambiarVengador, name: "cambiar_vengador" },
+        { path: '/crear_gema', component: CrearGema, name: "crear_gema" },
+        { path: '/cambiar_gema/:id', component: CambiarGema, name: "cambiar_gema" },
+        { path: '/crear_villano', component: CrearVillano, name: "crear_villano" },
+        { path: '/cambiar_villano/:id', component: CambiarVillano, name: "cambiar_villano" },
+        { path: '/contacto', component: Contacto }
+    ];
+
+    var router = new VueRouter({
+        routes: routes,
+    });
+
+    var app = new Vue({
+        el: '#app',
+        router: router
+    });
+</script>
+
+</html>

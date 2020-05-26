@@ -1,0 +1,153 @@
+ html {
+    box-sizing: border-box;
+    font-size: 62.5%; }
+  
+  *, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+
+
+ #contenedor-navbar {
+  background: linear-gradient(to left, #121414, rgb(209, 115, 8), rgb(10, 167, 106), #121414);
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center; 
+    text-decoration: none;
+    margin-right: 2rem;
+  }
+  
+  .cont-logo {
+    margin-left: 7px;
+   }
+    .cont-logo:hover {
+      background-color: #ffffff;
+      border-bottom: solid 1.5px #032da0;
+      border-top: solid 1.5px #032da0;
+      border-radius: 50px; 
+    }
+    .cont-logo .logo {
+      width: 70px;
+      height: 50px;
+     }
+  
+  .title-nav {
+    margin-left: 3px;
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 2.1rem;
+    color: #ffffff; }
+    @media (max-width: 1200px) {
+      .title-nav {
+        font-size: 1.8rem; } }
+    @media (max-width: 768px) {
+      .title-nav {
+        font-size: 1.2rem; } }
+  
+  .nav-menu {
+    margin-left: 25px; }
+  
+  .group-menu-link {
+    list-style: none;
+    display: flex;
+    align-items: center;
+ }
+  
+  .link {
+    background-color: #da690d;
+    padding: 3px 18px;
+    border-radius: 5px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+    box-shadow: 2px 2px 5px black; }
+    .link:hover {
+      transition: 0.6s;
+      background-color: white;
+      box-shadow: 2px 2px 5px #cccccc;
+      color: #797474;
+      font-size: 2rem; }
+
+.contenido {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-size: 100%;
+  
+}      
+
+
+.row {
+  display: block;
+}
+.single_delicious {
+   display: inline-block;
+}
+.single_delicious .thumb img {
+   margin-left: 2rem;
+  width:250px;
+  height:250px;
+  border-radius:150px;
+}
+.single_delicious .info {
+   margin-left: 1rem;
+   display: inline-block;
+   margin-bottom: 2rem;
+}
+.info h5 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+}
+.nueva {
+  font-family: "p22_corinthia", Helvetica, Arial, sans-serif;
+  color: rgb(3, 3, 3);
+  margin: 3rem;
+  font-weight: 900;
+}
+.nueva p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.titulo{
+  color: rgb(167, 13, 13);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.row {
+  display: flex;
+}
+.vengadores {
+   display: flex;
+   margin-right: 2rem;
+   margin-top: 2rem;
+}
+.vengadores .images img {
+   margin-right: 2rem;
+  width:250px;
+  height:250px;
+  border-radius:150px;
+}
+.vengadores .info {
+  margin-top: 1rem;
+   margin-left: 1rem;
+   display: inline-block;
+   margin-bottom: 2rem;
+}
